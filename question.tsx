@@ -36,23 +36,29 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: 'whitesmoke'
   },
   image: {
     width: 200,
     height: 200,
     marginBottom: 20,
-    
+    borderRadius:40,
   },
   questionText: {
-    fontSize: 18,
+    fontSize: 20,
     marginBottom: 20,
+    textAlign: 'center',
+    fontFamily: 'Lato'
   },
   option: {
-    backgroundColor: '#5271ff',
+    backgroundColor: '#ffefd5',
     padding: 10,
     margin: 5,
-    width:200,
+    width:150,
     resizeMode:'contain',
+    borderRadius:40,
+
+    
     
    
     
@@ -62,7 +68,10 @@ const styles = StyleSheet.create({
   optionText: {
     fontSize: 16,
     color:'#fffff',
+    textAlign: 'left',
+    fontFamily: 'Lato'
   },
+  
 });
 
 export default Question;

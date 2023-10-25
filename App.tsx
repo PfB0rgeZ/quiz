@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 import { View, Text, Button } from 'react-native';
 import Question from './Question';
 
+// QuizScreen.tsx
+
+// ... (seu código anterior)
+
 const QuizScreen: React.FC = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -13,6 +17,7 @@ const QuizScreen: React.FC = () => {
       options: ['A', 'E', 'I', 'O','U'],
       correctAnswer: 'A',
       imageSource: require('./letras/A.png'), // Import the image
+      
     },
     {
       questionText: '2. Qual letra esse sinal representa?',
@@ -50,8 +55,13 @@ const QuizScreen: React.FC = () => {
     setCurrentQuestion(currentQuestion + 1);
   };
 
+  const handleRestart = () => {
+    setCurrentQuestion(0);
+    setScore(0); // Reinicia a pontuação para 0
+  };
+
   return (
-    <View>
+    <View style={{ backgroundColor: 'whitesmoke' }}>
       {currentQuestion < questions.length ? (
         <Question
           questionText={questions[currentQuestion].questionText}
@@ -62,7 +72,7 @@ const QuizScreen: React.FC = () => {
       ) : (
         <View>
           <Text>Pontuação final: {score}</Text>
-          <Button title="Reiniciar" onPress={() => setCurrentQuestion(0)} />
+          <Button title="Reiniciar" onPress={handleRestart} />
         </View>
       )}
     </View>
