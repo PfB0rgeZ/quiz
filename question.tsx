@@ -48,7 +48,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 20,
     textAlign: 'center',
-    fontFamily: 'Lato'
+    fontFamily: 'Georgia, serif',
+   
   },
   option: {
     backgroundColor: '#ffefd5',
@@ -68,8 +69,8 @@ const styles = StyleSheet.create({
   optionText: {
     fontSize: 16,
     color:'#fffff',
-    textAlign: 'left',
-    fontFamily: 'Lato'
+    textAlign: 'center',
+    fontFamily: 'Georgia, serif'
   },
   
 });
